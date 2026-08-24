@@ -558,3 +558,10 @@ footer a {
         padding: 40px 7%;
     }
 }
+
+
+
+/* RESULTADO FINAL — mostrar a imagem inteira */
+.process .process-card:nth-child(2) .process-image img {
+    object-fit: contain;
+}
