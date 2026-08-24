@@ -380,58 +380,49 @@
 
                 <h3>Solicitar Orçamento</h3>
 
-                <form>
+                <form id="orcamentoForm">
 
-                    <label for="nome">
-                        Nome Completo
-                    </label>
+    <label for="nome">
+        Nome Completo
+    </label>
 
-                    <input
-                        type="text"
-                        id="nome"
-                        name="nome"
-                        placeholder="Seu nome">
+    <input
+        type="text"
+        id="nome"
+        name="nome"
+        placeholder="Seu nome"
+        required
+    >
 
+    <label for="whatsapp">
+        WhatsApp
+    </label>
 
-                    <label for="email">
-                        E-mail
-                    </label>
+    <input
+        type="tel"
+        id="whatsapp"
+        name="whatsapp"
+        placeholder="(11) 99999-9999"
+        required
+    >
 
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="seu@email.com">
+    <label for="projeto">
+        Sobre o seu projeto
+    </label>
 
+    <textarea
+        id="projeto"
+        name="projeto"
+        rows="6"
+        placeholder="Conte um pouco sobre o ambiente, o que você deseja e, se quiser, medidas aproximadas."
+        required
+    ></textarea>
 
-                    <label for="whatsapp">
-                        WhatsApp
-                    </label>
+    <button type="submit">
+        Falar sobre meu projeto no WhatsApp
+    </button>
 
-                    <input
-                        type="tel"
-                        id="whatsapp"
-                        name="whatsapp"
-                        placeholder="(11) 99999-9999">
-
-
-                    <label for="projeto">
-                        Descrição do Projeto
-                    </label>
-
-                    <textarea
-                        id="projeto"
-                        name="projeto"
-                        rows="6"
-                        placeholder="Conte um pouco sobre o seu projeto"></textarea>
-
-
-                    <button type="submit">
-                        Enviar por E-mail
-                    </button>
-
-                </form>
-
+</form>
             </div>
 
         </section>
@@ -458,7 +449,28 @@
 
     </footer>
 
+<script>
+document.getElementById("orcamentoForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
+    const nome = document.getElementById("nome").value.trim();
+    const whatsapp = document.getElementById("whatsapp").value.trim();
+    const projeto = document.getElementById("projeto").value.trim();
+
+    const mensagem =
+        "Olá, TUDU DIMADEIRA! Gostaria de solicitar um orçamento.\n\n" +
+        "Nome: " + nome + "\n" +
+        "WhatsApp: " + whatsapp + "\n" +
+        "Sobre o projeto: " + projeto;
+
+    const numero = "5511930113195";
+
+    window.open(
+        "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensagem),
+        "_blank"
+    );
+});
+</script>
 </body>
 
 </html>
