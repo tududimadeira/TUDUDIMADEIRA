@@ -32,30 +32,30 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #ffffff;
-    border-bottom: 1px solid #e8e8e8;
+    background: #fdfcf9;
+    border-bottom: 1px solid #ddd7ce;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 .logo {
-    font-size: 23px;
-    font-weight: 700;
-    letter-spacing: -0.7px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
     white-space: nowrap;
 }
 
 nav {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 24px;
 }
 
 nav a {
     text-decoration: none;
     font-size: 13px;
-    color: #333333;
+    color: #4a4641;
     transition: opacity 0.25s ease;
 }
 
@@ -73,7 +73,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #f4f2ee;
+    background: #eee9e1;
 }
 
 .hero > p:first-child {
