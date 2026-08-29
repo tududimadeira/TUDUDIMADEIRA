@@ -101,10 +101,20 @@ main {
     flex-direction: column;
     justify-content: center;
     background-color: #eee9e1;
-    background-image: url("hero-divisoria.png");
+    background-image:
+        linear-gradient(
+            90deg,
+            #eee9e1 0%,
+            #eee9e1 32%,
+            rgba(238, 233, 225, 0.96) 43%,
+            rgba(238, 233, 225, 0.65) 55%,
+            rgba(238, 233, 225, 0.15) 68%,
+            rgba(238, 233, 225, 0) 78%
+        ),
+        url("hero-divisoria.png");
     background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 50% 100%;
+    background-position: center, right center;
+    background-size: 100% 100%, 62% 100%;
 }
 
 .hero > p:first-child {
@@ -116,7 +126,7 @@ main {
 }
 
 .hero h1 {
-    max-width: 900px;
+    max-width: 760px;
     margin-bottom: 30px;
     font-size: clamp(46px, 7vw, 88px);
     line-height: 1.01;
