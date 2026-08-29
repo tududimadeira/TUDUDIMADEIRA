@@ -562,6 +562,7 @@ footer a {
 
 
 /* RESULTADO FINAL — mostrar a imagem inteira */
+.process .process-card:nth-child(1) .process-image img,
 .process .process-card:nth-child(2) .process-image img {
     object-fit: contain;
 }
