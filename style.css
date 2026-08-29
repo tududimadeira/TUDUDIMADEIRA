@@ -100,7 +100,11 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #eee9e1;
+    background-color: #eee9e1;
+    background-image: url("images/hero-divisoria.jpg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 50% 100%;
 }
 
 .hero > p:first-child {
