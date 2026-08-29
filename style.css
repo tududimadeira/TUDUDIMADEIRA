@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -41,14 +42,19 @@ header {
 }
 
 .logo {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 22px;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 28px;
     font-weight: 600;
     letter-spacing: 1.5px;
     color: #24211e;
     white-space: nowrap;
+    text-decoration: none;
 }
 
+.logo:hover {
+    color: #24211e;
+    text-decoration: none;
+}
 nav {
     display: flex;
     align-items: center;
