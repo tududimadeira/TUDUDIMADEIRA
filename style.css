@@ -28,39 +28,61 @@ a {
 
 header {
     width: 100%;
-    padding: 24px 7%;
+    padding: 22px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fdfcf9;
-    border-bottom: 1px solid #ddd7ce;
+    background: rgba(253, 252, 249, 0.96);
+    border-bottom: 1px solid #e5e0d8;
     position: sticky;
     top: 0;
     z-index: 1000;
+    backdrop-filter: blur(10px);
 }
 
 .logo {
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 22px;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    color: #24211e;
     white-space: nowrap;
 }
 
 nav {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 34px;
 }
 
 nav a {
+    position: relative;
     text-decoration: none;
-    font-size: 13px;
-    color: #4a4641;
-    transition: opacity 0.25s ease;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: #403b36;
+    transition: color 0.25s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 1px;
+    background: #8b7355;
+    transition: width 0.25s ease;
 }
 
 nav a:hover {
-    opacity: 0.55;
+    color: #8b7355;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 main {
